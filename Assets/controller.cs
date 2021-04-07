@@ -38,7 +38,7 @@ public class controller : MonoBehaviour
     public float Swipe()
     {
         //for PC debug
-        /*
+       /* 
         if (Input.GetMouseButtonDown(0))
         {
             //save began touch 2d point
@@ -50,7 +50,11 @@ public class controller : MonoBehaviour
             //save ended touch 2d point
             secondPressPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             torqueCurrent = torque;
-        }*/
+        }
+        currentSwipe = new Vector2(secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y);
+        */
+
+
         if (Input.touchCount > 0) {
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
